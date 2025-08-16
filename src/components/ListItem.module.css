@@ -1,0 +1,13 @@
+.item{
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    align-items: center;
+}
+
+.active{
+    background-color: white;
+    border-radius: 4px;
+    color: purple;
+    padding: 0.5rem;
+}

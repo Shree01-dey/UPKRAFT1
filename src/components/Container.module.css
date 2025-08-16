@@ -1,0 +1,517 @@
+.container{
+    width: 100%;
+    
+    max-height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.Navbar, .right, .user{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Navbar{
+    width: 100%;
+    padding: 0.25rem 1rem;
+
+}
+.search{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+}
+
+.is{
+    color: rgb(68, 68, 68);
+}
+
+.search input{
+    width: 30rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border:none;
+    outline: transparent;
+}
+.right{
+    align-items: center;
+    gap:0.5rem;
+    padding: 0.5rem;
+}
+.right .icon{
+   font-size: 1.5rem ;
+}
+.right .user .name{
+    font-size: 0.7rem
+}
+
+.user{
+    display: flex;
+    gap:0.25rem;
+    align-items: center;
+}
+.name p:nth-child(1){
+    font-weight: 700;
+}
+.name p:nth-child(2){
+    color: rgb(68, 68, 68);
+}
+
+/* main area styles */
+
+.main {
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    /* background: red; */
+
+    padding: 0.5rem;
+    gap: 0.25rem;
+}
+
+.box {
+    /* background: purple; */
+    border: solid 1px #0002;
+}
+
+.box1 {
+    grid-column: span 4;
+}
+
+.box2 {
+    grid-column: span 5;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.box3 {
+    grid-column: span 3;
+}
+
+.box4 {
+    grid-column: span 6;
+    height: 43vh;
+}
+
+.box5 {
+    grid-column: span 6;
+    border: none; /* card-like area, no outer border */
+    height: 43vh;
+}
+
+.metric {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+/* Profile styles */
+/* Refer & Earn card */
+.referCard {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    background: #3f20ff; /* strong purple */
+    border-radius: 16px;
+    overflow: hidden;
+    height: 100%;
+    box-shadow: 0 6px 20px rgba(63,32,255,0.18);
+}
+
+.referHero {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-top: 0.75rem;
+}
+
+.referHero img {
+    width: 160px;
+    height: auto;
+    object-fit: cover;
+    transform: translateY(6px);
+}
+
+.referBody {
+    padding: 1.25rem 1rem 1.5rem;
+    color: #fff;
+    text-align: center;
+}
+
+.referTitle {
+    margin: 0.25rem 0 0.5rem;
+    font-size: 1.35rem;
+    font-weight: 800;
+}
+
+.referDesc {
+    margin: 0 0 1rem;
+    color: #efeafd;
+    font-size: 0.9rem;
+}
+
+.referBtn {
+    background: #f6c343; /* soft yellow */
+    color: #2b2b2b;
+    border: none;
+    padding: 0.7rem 1rem;
+    width: 70%;
+    border-radius: 10px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: filter 0.2s ease-in-out;
+}
+
+.referBtn:hover { filter: brightness(0.95); }
+
+.referBtn svg { font-size: 1.1rem; }
+.profile {
+    padding: 1rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #f8f9fa;
+}
+
+.profileHeader h3 {
+    margin: 0 0 1.5rem 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.profileContent {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+}
+
+.profileLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.profileImage {
+    margin-bottom: 1.5rem;
+}
+
+.imageContainer {
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+}
+
+.profileCircle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #fbbf24;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    font-size: 0.8rem;
+    box-shadow: 0 4px 12px rgba(251, 191, 36, 0.3);
+}
+
+.statusBadge {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    width: 20px;
+    height: 20px;
+    background: #10b981;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.statusBadge svg {
+    color: white;
+    font-size: 12px;
+}
+
+.profileInfo {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.profileInfo h2 {
+    margin: 0 0 0.25rem 0;
+    font-size: .95rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.profileInfo p {
+    margin: 0;
+    color: #666;
+    font-size: 0.75rem;
+}
+
+.profileStats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 50%;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    background: #f3f0ff;
+    padding: 0.625rem 0.75rem;
+    border-radius: 6px;
+    gap: 0.625rem;
+}
+
+.statIcon {
+    color: #8b5cf6;
+    font-size: 1rem;
+}
+
+.statContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+}
+
+.statLabel {
+    color: #8b5cf6;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.statValue {
+    color: #333;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Performance section styles */
+.performanceSection {
+    padding: 1.25rem;
+    height: 40vh;
+    background: #fbfbfb;
+}
+
+.performanceGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    height: 35vh;
+}
+
+.leftPanel,
+.rightPanel {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 10px 20px rgba(0,0,0,0.03);
+}
+
+.leftPanel .performanceItem + .performanceItem {
+    margin-top: 2rem;
+}
+
+.performanceItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.performanceItem h4 {
+    margin: 0 0 0.75rem 0;
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #2b2b2b;
+}
+
+/* Semi circle gauge wrapper */
+.semiGauge {
+    width: 170px;
+    height: auto;
+    position: relative;
+}
+
+.semiGauge .CircularProgressbar {
+    width: 170px;
+    height: 170px; /* render full circle then clip */
+    transform: translateY(-42.5px);
+    clip-path: inset(42.5px 0 0 0);
+}
+
+.semiGaugeValue {
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: baseline;
+    gap: 0.25rem;
+}
+
+.score {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #6d28d9; /* purple */
+}
+
+.total {
+    color: #6b7280; /* gray-500 */
+}
+
+/* Full circle gauge */
+.fullGauge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0 1.25rem;
+}
+
+.circleWrap {
+    width: 160px;
+    height: 160px;
+    position: relative;
+}
+
+.circleWrap .CircularProgressbar {
+    width: 160px;
+    height: 160px;
+}
+
+.fullGaugeValue {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.feedbackCount {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1f2937; /* gray-800 */
+}
+
+.feedbackLabel {
+    font-size: 0.8rem;
+    color: #9ca3af; /* gray-400 */
+}
+
+.rightPanel .performanceItem h4 {
+    margin-top: 0.25rem;
+}
+
+.feedbackButton {
+    margin-top: auto;
+    align-self: center;
+    background: #6d28d9; /* purple */
+    color: #fff;
+    border: none;
+    padding: 0.9rem 1.25rem;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+    width: fit-content;
+}
+
+.feedbackButton:hover {
+    background: #5b21b6;
+}
+
+.feedbackButton svg { font-size: 1.1rem; }
+
+/* Lessons table styles */
+.lessonsTable {
+    padding: 1rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.tableHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.tableHeader h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.viewAll {
+    color: #8b5cf6;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.viewAll:hover {
+    text-decoration: underline;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+.table th {
+    text-align: left;
+    padding: 0.75rem 0.5rem;
+    color: #666;
+    font-weight: 500;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 0.8rem;
+}
+
+.table td {
+    padding: 0.75rem 0.5rem;
+    border-bottom: 1px solid #f0f0f0;
+    color: #333;
+}
+
+.table tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+.table tbody tr:last-child td {
+    border-bottom: none;
+}

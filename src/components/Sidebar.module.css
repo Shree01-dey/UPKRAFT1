@@ -1,0 +1,29 @@
+.sidebar{
+    background: linear-gradient(to bottom, #4501e8,#6c09be);
+    color: #fed6fe;
+    width: fit-content;
+    height: 100%;
+    padding: 0.5rem;
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.list{
+    color: rgb(202, 194, 194);
+}
+
+.actions{
+    color: rgb(209, 168, 168);
+    justify-self: flex-end;
+}
+
+.logout{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgb(252, 127, 105);
+    
+}
